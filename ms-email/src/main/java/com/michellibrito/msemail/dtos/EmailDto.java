@@ -1,27 +1,32 @@
 package com.michellibrito.msemail.dtos;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import java.io.Serializable;
 
 @Data
-public class EmailDto {
+@AllArgsConstructor
+@NoArgsConstructor
+public class EmailDto implements Serializable {
 
     @NotBlank
-    private final String ownerRef;
+    private String ownerRef;
 
     @NotBlank
     @Email
-    private final String emailFrom;
+    private String emailFrom;
 
     @NotBlank
     @Email
-    private final String emailTo;
+    private String emailTo;
 
     @NotBlank
-    private final String subject;
+    private String subject;
 
     @NotBlank
-    private final String text;
+    private String text;
 }

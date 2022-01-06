@@ -1,13 +1,18 @@
 package com.michellibrito.msemail.models;
 
 import com.michellibrito.msemail.enums.StatusEmail;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "TB_EMAIL")
 public class Email implements Serializable {
@@ -15,7 +20,7 @@ public class Email implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private UUID id;
     private String ownerRef;
     private String emailFrom;
     private String emailTo;
