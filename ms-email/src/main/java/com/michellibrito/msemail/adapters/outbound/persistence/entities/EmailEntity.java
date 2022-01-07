@@ -1,10 +1,9 @@
-package com.michellibrito.msemail.models;
+package com.michellibrito.msemail.adapters.outbound.persistence.entities;
 
-import com.michellibrito.msemail.enums.StatusEmail;
+import com.michellibrito.msemail.applicationcore.domain.enums.StatusEmail;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -15,7 +14,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @Entity
 @Table(name = "TB_EMAIL")
-public class Email implements Serializable {
+public class EmailEntity implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
@@ -31,3 +30,4 @@ public class Email implements Serializable {
     private LocalDateTime sendDateEmail;
     private StatusEmail statusEmail;
 }
+

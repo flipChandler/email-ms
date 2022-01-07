@@ -1,4 +1,4 @@
-package com.michellibrito.msemail.dtos;
+package com.michellibrito.msemail.adapters.dtos;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

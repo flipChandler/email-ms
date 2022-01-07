@@ -1,4 +1,4 @@
-package com.michellibrito.msemail.configs;
+package com.michellibrito.msemail.adapters.configuration;
 
 import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
